@@ -1,0 +1,62 @@
+<%- include('partials/header') %>
+    <title>Home</title>
+</head>
+<body>
+    <%- include('partials/navbar') %>
+
+    <%
+    var today = new Date();
+    %>
+    <div class="container">
+        <div class="row">
+            <div class="top5">
+            <h1 class="res">Resume Website</h1>
+            <p class="time"><%= today %></p>
+            </div>
+
+            <hr>
+            <div class="info-container">
+                <!-- Personal Information -->
+                <h2>Personal Information</h2>
+                <ul>
+                    <% for(let i = 0; i < myInfos.length; i ++) { %>
+                        <li><%= myInfos[i].userFirst %></li>
+                        <li><%= myInfos[i].lastName %></li>
+                        <li><%= myInfos[i].userAge %></li>
+                        <li><%= myInfos[i].userResidance %></li>
+                    <% } %>  
+                </ul> 
+                <!-- Education- Information --> 
+                <h2>Education</h2>
+                <ul>
+                    <% for(let i = 0; i < myInfos.length; i ++) { %>
+                        <li><%= myInfos[i].userHighschool %></li>
+                        <li><%= myInfos[i].lastGymnasium %></li>
+                        <li><%= myInfos[i].userUniversity %></li>
+                    <% } %>  
+                </ul>  
+                <!-- Techincal Information -->
+                <h2>Technical skills</h2>
+                <ul>
+                    <% for(let i = 0; i < myInfos.length; i ++) { %>
+                        <li><%= myInfos[i].userProgramming %></li>
+                        <li><%= myInfos[i].lastBackend %></li>
+                        <li><%= myInfos[i].userFrontend %></li>
+                        <li><%= myInfos[i].userVersion %></li>
+                    <% } %>  
+                </ul>  
+                <!-- Soft Skills Information -->
+                <h2>Soft Skills</h2>
+                <ul>
+                    <% for(let i = 0; i < myInfos.length; i ++) { %>
+                        <li><%= myInfos[i].userTime %></li>
+                        <li><%= myInfos[i].lastCreative %></li>
+                        <li><%= myInfos[i].userTeamwork %></li>
+                    <% } %>  
+                </ul>  
+        </div>
+    </div>
+</div>
+
+
+<%- include('partials/footer') %>

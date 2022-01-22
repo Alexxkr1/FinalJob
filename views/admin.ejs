@@ -1,0 +1,38 @@
+<%- include('partials/header') %>
+    <title>Admin</title>
+</head>
+<body>
+    <%- include('partials/navbarLogged') %>
+    <div class="container">
+        <div class="row">
+            <form action="/postInfo" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                <h1>Personal Information</h1>
+                <input class="form-control" type="text" name="userFirst" placeholder="add a firstname">
+                <input class="form-control" type="text" name="userLast" placeholder="add a lastname">
+                <input class="form-control" type="text" name="userAge" placeholder="add a age">
+                <input class="form-control" type="text" name="userResidance" placeholder="add a userResidance">
+                <input class="btn btn-primary"  type="file" name="userFile" class="add a pic">
+                <h1>Education</h1>
+                <input class="form-control" type="text" name="userHighschool" placeholder="add a high school">
+                <input class="form-control" type="text" name="lastGymnasium" placeholder="add a Gymnasium">
+                <input class="form-control" type="text" name="userUniversity" placeholder="add a University">
+                <h1>Technical skills</h1>
+                <input class="form-control" type="text" name="userProgramming" placeholder="add a Programming skills">
+                <input class="form-control" type="text" name="lastBackend" placeholder="add a Backend knowledge">
+                <input class="form-control" type="text" name="userFrontend" placeholder="add a Frontend knowledge">
+                <input class="form-control" type="text" name="userVersion" placeholder="add a Version control">
+                <h1>Soft skills</h1>
+                <input class="form-control" type="text" name="userTime" placeholder="add a time management">
+                <input class="form-control" type="text" name="lastCreative" placeholder="add a Creative thinking">
+                <input class="form-control" type="text" name="userTeamwork" placeholder="add a Teamwork skills">
+            </div>
+                <button class="btn btn-primary" type="submit">Add all info</button>
+            </form>
+        </div>
+    </div>
+
+    
+
+    
+<%- include('partials/footer') %>

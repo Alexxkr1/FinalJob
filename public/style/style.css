@@ -1,0 +1,26 @@
+
+footer {
+  margin-top: 1rem;
+    position: absolute;
+    bottom: 0;
+
+    width: 100vw;
+  }
+
+h1:hover{
+ font-weight: bold;
+}
+
+.top5 p{
+
+  position: relative;
+  animation-name: header;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes header{
+  0%{left:-150%}
+  50%{left: 10%}
+  100%{left: 0%;
+  }
