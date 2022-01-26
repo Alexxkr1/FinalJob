@@ -1,6 +1,7 @@
 const User = require('../models/user');
 const Info = require('../models/info');
 const passport = require('passport');
+const { fetchDatas } = require('../models/info');
 
 exports.getMainPage = (request, response) => {
     Info.fetchInfos(infos =>{
@@ -49,11 +50,14 @@ exports.postLogin = (req, res) => {
 };
 
 exports.getAdminPage = (req, res) => {
-    if(req.isAuthenticated()){
-        res.render('admin');
-    } else {
-        res.redirect('/');
-    }
+    Info.fetchInfos(infos =>{
+        console.log(infos);
+        if(req.isAuthenticated()){
+            res.render('admin', {myInfos: infos});
+        } else {
+            res.redirect('/');
+        }
+    })
 };
 
 
@@ -77,6 +81,6 @@ exports.postInfo = (req, res) => {
 exports.deleteInfo = (req, res) => {
     let infoToDelete = req.body.infoToDelete;
     Info.deleteInfo(infoToDelete);
-    res.redirect('/');
+    res.redirect('/admin');
 
 }

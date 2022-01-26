@@ -48,6 +48,7 @@ module.exports = class Info {
                     console.log('info saved.');
                 }
             });
+            fs.de
 
         });
     }
@@ -71,7 +72,7 @@ module.exports = class Info {
             }
 
             for(let i = 0; i < infos.length; i++) {
-                if(infos[i].description === infoToDelete){
+                if(infos[i].userFirst === infoToDelete){
                     infos.splice(i, 1);
                     break;
                 }

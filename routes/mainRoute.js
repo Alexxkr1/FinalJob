@@ -26,6 +26,7 @@ router.get('/admin', mainController.getAdminPage);
 router.get('/logout', mainController.userLogout);
 
 router.post('/postInfo', upload.single('userFile'), mainController.postInfo);
+router.post('/deleteInfo', mainController.deleteInfo);
 
 
 

@@ -9,6 +9,7 @@ const app = express();
  //connect to the db
 
 app.use(express.static('public'));
+app.use(express.static('images'));
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({extended: true}));
 

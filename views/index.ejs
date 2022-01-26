@@ -8,13 +8,20 @@
     var today = new Date();
     %>
     <div class="container">
+
         <div class="row">
+
             <div class="top5">
-            <h1 class="res">Resume Website</h1>
-            <p class="time"><%= today %></p>
+                <h1 class="res">Resume Website</h1>
+                <p class="time"><%= today %></p>
+
+                <% for(let i = 0; i < myInfos.length; i ++) { %>
+                    <img width="400px" class="img-thumbnail" src="<%= myInfos[i].imageUrl %>" alt="">
+                <% } %>  
             </div>
 
             <hr>
+
             <div class="info-container">
                 <!-- Personal Information -->
                 <h2>Personal Information</h2>
@@ -54,9 +61,11 @@
                         <li><%= myInfos[i].userTeamwork %></li>
                     <% } %>  
                 </ul>  
+            </div>
+
         </div>
+        
     </div>
-</div>
 
 
 <%- include('partials/footer') %>
